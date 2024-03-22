@@ -6,12 +6,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/user.css">
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <title>teacher-prueba</title>
+    <title>teacher-feedback</title>
 
 </head>
 <body>
 	
-     <div class="section">
+     <div class="section"> <!--Clase del fondo del log in-->
 		<div class="container">
 			<div class="area" >
 				<ul class="circles">
@@ -35,41 +35,49 @@
 			          	<label for="reg-log"></label>
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
-								<div class="card-front">
+								<div class="card-front"> <!--Clase del primer lado que representa el log in-->
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Log In</h4>
 											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
+												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off"> <!--Colocar el email en log in-->
+												<i class="input-icon uil uil-at"></i> <!--Icono de email en log in-->
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
+												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off"> <!--Colocar password en log in-->
+												<i class="input-icon uil uil-lock-alt"></i> <!--Icono de candado para el password en log in-->
 											</div>
 											<a href="#" class="btn mt-4">submit</a>
-                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p> <!--Link de forgot your password en log in-->
 				      					</div>
 			      					</div>
 			      				</div>
 								
-								<div class="card-back">
+								<div class="card-back"> <!--Clase del segundo lado que representa el Sign Up-->
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Sign Up</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-												<i class="input-icon uil uil-user"></i>
+												<input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off"> <!--Agregar nombre completo en Sign Up-->
+												<i class="input-icon uil uil-user"></i> <!--Icono de agregar nombre completo en Sign Up-->
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
+												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off"> <!--Agregar email en Sign Up-->
+												<i class="input-icon uil uil-at"></i> <!--Icono de email en Sign Up-->
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<a href="#" class="btn mt-4">submit</a>
+												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off"> <!--Agregar Password en Sign Up-->
+												<i class="input-icon uil uil-lock-alt"></i> <!--Icono de candado para el password en Sign Up-->
+											 </div>
+											<div class="form-group mt-2">
+												<input type = "verify password" name="logverifypass" class = "form-style" placeholder="Verify Password" id="logverifypass" autocomplete="off"> <!--Verificar password en Sign Up-->
+												<i class="input-icon uil uil-lock-alt"></i> <!--Icono de candado para la parte de verificar password en Sign Up-->
+											 </div>
+											 <div class="form-group mt-2">
+												<input type="Choose Career" name="ChooseCareer" class="form-style" placeholder="Choose Your Career" id="ChooseCareer" autocomplete="off"> <!--Opcion para elegir tu carrera-->
+											 </div>
+											
+											<a href="#" class="btn mt-4">submit</a> <!--Boton de enviar info-->
 											
 				      					</div>
 			      					</div>
