@@ -133,7 +133,7 @@ h6 span{
   position: absolute;
   width: 100%;
   padding: 0 35px;
-  top: 50%;
+  top: 40%;
   left: 0;
   transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
@@ -148,7 +148,7 @@ h6 span{
     padding: 0;
 }
 .form-style {
-  padding: 13px 20px;
+  padding: 13px 10px; /*Tamaño de la barra de los input*/
   padding-left: 55px;
   height: 48px;
   width: 100%;
@@ -397,9 +397,6 @@ body{
     animation-delay: 0s;
     animation-duration: 11s;
 }
-
-
-
 @keyframes animate {
 
     0%{
@@ -415,3 +412,8 @@ body{
     }
 
 }
+
+select option{
+  color: gray;
+}
+
