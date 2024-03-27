@@ -205,6 +205,7 @@ h6 span{
 
 .mb-4, .pb-3{
   font-size: 28px;
+
 }
 
 
@@ -413,7 +414,8 @@ body{
 
 }
 
-select option{
+select .opcionesCareer{
   color: gray;
 }
+
 
