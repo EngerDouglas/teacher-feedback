@@ -63,11 +63,6 @@
 
 }
 
-body{
-    background-color: gray;
-   
-}
-
 /* Estilos para la barra de búsqueda */
 .search-bar {
     display: flex;
@@ -293,11 +288,29 @@ footer {
     width: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: 20px;
-    border: #070a57;
+    border: 10px solid #c4c3ca;
+    background-color: #c4c3ca;
+    border-radius: 10px;
+  
 }
 
 .margin-top{
+    margin-top: 20px;
+}
 
-    margin-bottom: 20px;
+.margin-all{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btnparalelo{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color:  #17202A;
+
+
 }
