@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Boton submit del Log In
 document.getElementById("btnSubmit").addEventListener("click", () => {
         // Obtener los valores de los campos del formulario
