@@ -38,6 +38,7 @@
 								<div class="card-front"> <!--Clase del primer lado que representa el log in-->
 									<div class="center-wrap">
 										<div class="section text-center">
+											<form id="form-Log-In "action="" method="post" >
 											<h4 class="mb-4 pb-3">Log In</h4>
 											<div class="form-group">
 												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required> <!--Colocar el email en log in-->
@@ -47,34 +48,36 @@
 												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required> <!--Colocar password en log in-->
 												<i class="input-icon uil uil-lock-alt"></i> <!--Icono de candado para el password en log in-->
 											</div>
-											<a href="#" class="btn mt-4">ENTER</a> <!--Boton de login-->
+											<button id="enterbtn" type="Enter" class="btn mt-4">ENTER</button> <!--Boton de login-->
                             				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p> <!--Link de forgot your password en log in-->
+										</form>
 				      					</div>
 			      					</div>
 			      				</div>
 								
-								<div class="card-back"> <!--Clase del segundo lado que representa el Sign Up-->
+								 <div class="card-back"> <!--Clase del segundo lado que representa el Sign Up-->
 									<div class="center-wrap">
+										<form id="form-create-user" action="" method="post"> <!--Form del Sign Up-->
 										<div class="section text-center" id = "form-user">
 											<h4 class="mb-4 pb-3">Sign Up</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Username" id="logname" autocomplete="off" required> <!--Agregar nombre completo en Sign Up-->
+												<input type="text" name="logname" class="form-style" placeholder="Username" id="signname"  required> <!--Agregar nombre completo en Sign Up-->
 												<i class="input-icon uil uil-user"></i> <!--Icono de agregar nombre completo en Sign Up-->
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required> <!--Agregar email en Sign Up-->
+												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="signemail"  required> <!--Agregar email en Sign Up-->
 												<i class="input-icon uil uil-at"></i> <!--Icono de email en Sign Up-->
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" minlength="8" required> <!--Agregar Password en Sign Up-->
+												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="signpass"  minlength="8" required> <!--Agregar Password en Sign Up-->
 												<i class="input-icon uil uil-lock-alt"></i> <!--Icono de candado para el password en Sign Up-->
 											 </div>
 											<div class="form-group mt-2">
-												<input type = "password" name="logverifypass" class ="form-style" placeholder="Verify Password" id="logverifypass" autocomplete="off" minlength="8" required> <!--Verificar password en Sign Up-->
+												<input type = "password" name="logverifypass" class ="form-style" placeholder="Verify Password" id="signverifypass"  minlength="8" required> <!--Verificar password en Sign Up-->
 												<i class="input-icon uil uil-lock-alt"></i> <!--Icono de candado para la parte de verificar password en Sign Up-->
 											 </div>
 											 <div class="form-group mt-2">
-												<form type="Career" name="ChooseCareer"  id="ChooseCareer" autocomplete="off"> <!--Opciones de carrera-->
+												 <!--Opciones de carrera-->
 													<select id="opcionesCareer" name="opciones" class="form-style">
 														<option value="opcion">Choose Your Career</option>
 														<option value="opcion1">Ingenieria en Ciencias de la Computacion</option>
@@ -113,27 +116,29 @@
 														<option value="opcion34">Hospitalidad y Turismo</option>
 														<option value="opcion35">Gastronomía y Artes Culinarias</option>
 													</select>
-												</form>
+												
 																							 
 											</div>
 											
-<<<<<<< HEAD
-											<a href="#" class="btn mt-4" id="btnSubmit">submit</a> <!--Boton de enviar info-->
-=======
-											<a href="#" class="submitSing">submit</a> <!--Boton de enviar info-->
->>>>>>> 1683d1b159452dc1ea20aefe13953f82a001617a
+											<button id="Createbtn" class="btn mt-4" type="Submit">submit</button> <!--Boton de enviar info-->
 											
 				      					</div>
+									</form>
+
 			      					</div>
+								
 			      				</div>
 			      			</div>
 			      		</div>
 			      	</div>
 		      	</div>
 	      	</div>
-	    </div>
+		
+	      </div>
+	
 	</div>
 
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="../js/user.js"></script> 
 
 </body>
