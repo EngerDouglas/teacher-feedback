@@ -1,40 +1,29 @@
 //Boton Submit para Sign UP
-const formCreateUser = document.getElementById('form-create-user');
-const signname = document.getElementById("signname").value
-const signemail = document.getElementById("signemail").value
-const signpass = document.getElementById("signpass").value
-const signverifypass = document.getElementById("signverifypass").value
-const opcionesCareer = document.getElementById("opcionesCareer").value
+//let formCreateUser = document.getElementById('form-create-user');
 
+function Submit() {
 
-
-formCreateUser.addEventListener('Submit', function(event){
-    event.preventDefault();
-
-  
-    const data = {
-        signname: signname,
-        signemail: signemail,
-        signpass: signpass,
-        signverifypass: signverifypass,
-        opcionesCareer: opcionesCareer,
-    }
+    let signname = document.getElementById("signname").value
+    let signemail = document.getElementById("signemail").value
+    let signpass = document.getElementById("signpass").value
+    let signverifypass = document.getElementById("signverifypass").value
+    let opcionesCareer = document.getElementById("opcionesCareer").value
 
     if (opcionesCareer === '' && opcionesCareer === "Choose Your Career" ) {
-        alert('Por favor, selecciona una Carrera');
+        alert("Eliga una carrera")
+        return false;
     }
-    
 
     if (signverifypass !== signpass)
     {
         alert("Las contraseñas no coinciden");
+        return false;
     }
 
-    window.location.href = '';
+    return true;
+    
+}
 
-
-
-});
 
 
 //Manda el usuario al servidor
@@ -49,12 +38,4 @@ function getUsers(){
     });
 }
 
-getUsers();
-
-function redirectToPage() {
-    // Cambiar "pagina_destino.html" con la URL de la página a la que deseas redirigir
-    window.location.href = "index.html";
-}
-
-// Agregar un evento de clic al botón para llamar a la función de redirección
-document.getElementById("Submit").addEventListener("click", redirectToPage);
+//getUsers();
