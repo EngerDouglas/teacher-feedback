@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../css/user.css">
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>teacher-feedback</title>
-	<script src="../js/user.js"></script> <!--js del user-->
 
 </head>
 <body>
@@ -39,7 +38,7 @@
 								<div class="card-front"> <!--Clase del primer lado que representa el log in-->
 									<div class="center-wrap">
 										<div class="section text-center">
-											<form id="form-Log-In "action="" method="post" >
+											<form id="form-Log-In "action="" method="post" > <!--Form pal login-->
 											<h4 class="mb-4 pb-3">Log In</h4>
 											<div class="form-group">
 												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required> <!--Colocar el email en log in-->
@@ -58,11 +57,11 @@
 								
 								 <div class="card-back"> <!--Clase del segundo lado que representa el Sign Up-->
 									<div class="center-wrap">
-										<form id="form-create-user" action="" method="post"> <!--Form del Sign Up-->
+										<form id="form-create-user" action="" method="post" onsubmit="return SubmitCompleto()"> <!--Form del Sign Up--> <!--LA VUELTA SIEMPRE ES EL FORM PA TOO-->
 										<div class="section text-center" id = "form-user">
 											<h4 class="mb-4 pb-3">Sign Up</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Username" id="signname"  required> <!--Agregar nombre completo en Sign Up-->
+												<input type="text" name="logname" class="form-style" placeholder="Username" id="signname" minlength="10" required> <!--Agregar nombre completo en Sign Up-->
 												<i class="input-icon uil uil-user"></i> <!--Icono de agregar nombre completo en Sign Up-->
 											</div>	
 											<div class="form-group mt-2">
@@ -80,7 +79,7 @@
 											 <div class="form-group mt-2">
 												 <!--Opciones de carrera-->
 													<select id="opcionesCareer" name="opciones" class="form-style">
-														<option value="opcion">Choose Your Career</option>
+														<option value="">Choose Your Career</option>
 														<option value="opcion1">Ingenieria en Ciencias de la Computacion</option>
 														<option value="opcion2">Ingenieria Civil</option>
 														<option value="opcion3">Ingenieria Industrial y de Sistemas</option>
@@ -121,7 +120,7 @@
 																							 
 											</div>
 											
-											<button id="Createbtn" class="btn mt-4" type="Submit" onclick="Submit()">submit</button> <!--Boton Submit para crear el usuario-->
+											<button id="Createbtn" class="btn mt-4" type="Submit">submit</button> <!--Boton Submit para crear el usuario-->
 											
 				      					</div>
 									</form>
@@ -140,6 +139,7 @@
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="../js/user.js"></script> <!--js del user-->
 
 </body>
 </html>

@@ -3,27 +3,58 @@
 
 function Submit() {
 
-    let signname = document.getElementById("signname").value
-    let signemail = document.getElementById("signemail").value
-    let signpass = document.getElementById("signpass").value
-    let signverifypass = document.getElementById("signverifypass").value
-    let opcionesCareer = document.getElementById("opcionesCareer").value
+    let signname = document.getElementById("signname").value;
+    let signemail = document.getElementById("signemail").value;
+    let signpass = document.getElementById("signpass").value;
+    let signverifypass = document.getElementById("signverifypass").value;
+    let opcionesCareer = document.getElementById("opcionesCareer").value;
 
-    if (opcionesCareer === '' && opcionesCareer === "Choose Your Career" ) {
-        alert("Eliga una carrera")
+    //Validacion de los password
+    if (signverifypass !== signpass) 
+    {
+        alert("Las contraseñas no coinciden.");
         return false;
     }
 
-    if (signverifypass !== signpass)
+    //Validar carrera 
+    if (opcionesCareer === "" ) {
+        alert("Eliga una carrera.");
+        return false;
+    }
+
+    //Validar username
+    if(!validarUsername(signname))
     {
-        alert("Las contraseñas no coinciden");
+        alert("El usuario contiene caracteres no permitidos.")
         return false;
     }
 
     return true;
-    
+   
 }
 
+function SubmitCompleto()
+{
+    if(Submit())
+    {
+        window.location.href="index.html"
+    
+    }
+    else{
+        return false;
+    }
+
+}
+
+function index(){
+    window.location.href="index.html"
+}
+
+function validarUsername(username)
+{
+    var regex = /^[a-zA-Z0-9_-]+$/
+    return regex.test(username);
+}
 
 
 //Manda el usuario al servidor
