@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
+
+
 body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -418,6 +420,11 @@ select .opcionesCareer{
   color: gray;
 }
 
+/*Logo*/
+img{
+  margin-bottom: 110px;
+}
 
-
-
+.mb{
+  margin-bottom: 50px;
+}

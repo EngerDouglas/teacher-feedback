@@ -14,8 +14,16 @@ function Submit() {
     {
         alert("Las contraseñas no coinciden.");
         return false;
+        
     }
 
+    //Validar que el passwor tenga Una mayuscula, 4 letras y 3 numeros
+    if(!validarPassword(signpass))
+    {
+        alert("La contraseña debe contener una Mayuscula, 4 letras y 3 numeros");
+        return false;
+    }
+    
     //Validar carrera 
     if (opcionesCareer === "" ) {
         alert("Eliga una carrera.");
@@ -29,19 +37,73 @@ function Submit() {
         return false;
     }
 
+    //validar email
+    if(!verificarEmail(signemail))
+    {
+        alert("El email es incorrecto.")
+        return false;
+    }
+
     return true;
    
 }
 
+//Funcion de validar el password
+function validarPassword(password)
+{
+    var letras = 0;
+    var numeros = 0;
+    var tieneMayuscula = false;
+
+    for(var i = 0; i < password.length; i++)
+    {
+        var caracter = password.charAt(i);
+        
+        if(/[a-zA-Z]/.test(caracter))
+        {
+            letras++;
+            
+            if(caracter === caracter.toUpperCase())
+            {
+                tieneMayuscula = true;
+            }
+
+        } else if(!isNaN(parseInt(caracter)))
+        {
+            numeros++;
+        }
+    }
+
+    if(letras >= 4 && numeros >= 3 && tieneMayuscula)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+
+//Funcion para validar email
+function validarEmail(email) {
+    // Expresión regular para validar el email
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+\.com$/;
+    return regex.test(email);
+  }
+
 function SubmitCompleto()
 {
-    if(Submit())
+    if(!Submit())
     {
-        window.location.href="index.html"
-    
+        return false;    
     }
     else{
-        return false;
+
+        window.location.href="index.html"
+
+       
     }
 
 }
@@ -69,4 +131,5 @@ function getUsers(){
     });
 }
 
-//getUsers();
+//Logo del ojo para el password
+
